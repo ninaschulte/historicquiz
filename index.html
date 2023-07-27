@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="index.js"></script>
 </head>
 <header>
@@ -13,21 +14,25 @@
 </header>
 <main>
     <section id="welcome">
-        <h1 id="welcomeheader"></h1>
+        <h1 id="welcomeheader">Welcome to the historic quiz</h1>
         <form>
-            <input type="text" id="username"></input>
-            <input type="submit" id="welcomesubmit"></input>
+            <label for="username">Type your name</label><br>
+            <input type="text" id="username" required></input>
+            <input type="submit" id="welcomesubmit" value="Start Quiz"></input>
         </form>
-        <p></p>
     </section>
     <section id="play">
         <h1 id="question"></h1>
-        <p id="option1"></p>
-        <p id="option2"></p>
-        <p id="option3"></p>
-        <p id="option4"></p>
-        <input type="submit" id="playsubmit"></input>
-        <input type="submit" id="nextquestion"></input>
+        <div id="options">
+            <p id="option1">test</p>
+            <p id="option2">test</p>
+            <p id="option3">test</p>
+            <p id="option4">test</p>
+        </div>
+        <div id="inputplay">
+            <input type="submit" id="playsubmit" value="Submit Your Answer"></input>
+            <input type="submit" id="nextquestion" value="Go to the next question"></input>
+        </div>
         <p id="progress"></p>
     </section>
     <section id="result">

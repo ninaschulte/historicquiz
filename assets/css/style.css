@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+main {
+    font-family: Ubuntu, sans-serif;
+    font-weight: 300;
+    color: #252525;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+#welcome {
+    align-items: center;
+}
+
+#play {
+   
+}
+
+#play #options {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3rem;
+    background-color: blue;
+    margin: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+header p {
+    color: blue;
+}
+
