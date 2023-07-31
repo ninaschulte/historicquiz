@@ -50,6 +50,14 @@ const historicQuestions = [
         correctAnswer: 0
     }];
 
+// question
+document.getElementById("question").innerHTML = questions[index].question;
+
+// answers            
+for (i = 0; i < 4; i++) {
+    document.getElementById("answer" + i).innerHTML = questions[index].options[i];
+}
+
 // question which is currently displayed
 let currentQuestion = 4;
 
@@ -220,5 +228,30 @@ function initAnswerButtons() {
     }
 
 }
+
+function nextRandomQuestionNumber(questionArray, numbersArray) {
+    let randomNumber;
+    // Check if we can do anything at all
+    if (numbersArray.length == questionArray.length) {
+        console.log('All numbers gone');
+    }
+
+    let i = 0;
+    // check if number is new
+    do {
+        // use math random and math floor to return integer
+        randomNumber = Math.floor(Math.random() * questionArray.length);
+
+        i++;
+
+        if (i == 10) {
+            break;
+        }
+
+    } while (numbersArray.includes(randomNumber));
+
+    numbersArray.push(randomNumber);
+    return (randomNumber);
+}       
 
 
