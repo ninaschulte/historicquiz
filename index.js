@@ -131,6 +131,36 @@ function submitAnswer(event) {
 
         let correctAnswer = historicQuestions[currentQuestion].correctAnswer;
 
+        // handler for submit button       
+        function submitAnswer(event) {
 
+            // submit is only possible if an answer was chosen
+            if (currentAnswer != 5) {
+
+                // note that answer was submitted so no further change is allowed
+                submitted = true;
+
+                let correctAnswer = historicQuestions[currentQuestion].correctAnswer;
+
+                // mark correct answer
+                document.getElementById("answer" + correctAnswer).style.backgroundColor = "green";
+
+                // count correct / wrong answers
+                if (currentAnswer == correctAnswer) {
+
+                    correctAnswers++;
+                }
+                else {
+
+                    wrongAnswers++;
+
+                }
+            }
+            else {
+                // simple alert            
+                alert("Please choose an answer first");
+
+            }
+        }
 
 
