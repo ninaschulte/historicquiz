@@ -53,6 +53,16 @@ const historicQuestions = [
 // question which is currently displayed
 let currentQuestion = 4;
 
+// how many questions were shown
+let questionsShown = 0;
+
+// what answer was clicked last?
+let currentAnswer = 4;
+
+// was the answer submitted already?
+let submitted = false;
+
+
 // display question 
 displayQuestion(historicQuestions, currentQuestion);
 
@@ -162,5 +172,21 @@ function submitAnswer(event) {
 
             }
         }
+
+        // show next question, if all are answered show result page                
+        if (questionsShown < numberOfQuestions) {
+
+            showRandomQuestion();
+
+        }
+        else {
+
+            document.getElementById("play").style.display = "none";
+            document.getElementById("result").style.display = "flex";
+        }
+    }
+}
+
+//        
 
 
