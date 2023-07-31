@@ -65,6 +65,34 @@ function displayQuestion(questions, index) {
     }
 }
 
+// question
+document.getElementById("question").innerHTML = questions[index].question;
+
+// answers            
+for (i = 0; i < 4; i++) {
+    document.getElementById("answer" + i).innerHTML = questions[index].options[i];
+}
+        
+        }
+
+//		handler for choosing an answer
+function chooseAnswer(event) {
+
+    // 			check if answer was already submitted
+    if (!submitted) {
+
+        // all answer boxes have the same handler, so find out which one was clicked
+        let chosenAnswerButton = event.target || event.srcElement;
+
+        // check that it is not chosen already (otherwise don't do do anything)
+        if (chosenAnswerButton.id.charAt(6) != currentAnswer) {
+
+            //	if other than currently clicked answer was selected before, set that to blue again   
+            if (currentAnswer != 4) {
+                document.getElementById("answer" + currentAnswer).style.backgroundColor = "#3498db";
+
+            }
+
 
 
 
