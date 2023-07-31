@@ -201,4 +201,24 @@ function showRandomQuestion() {
     // reset current answer
     currentAnswer = 4;     
 
+    // turn buttons blue again            
+    initAnswerButtons();
+
+    // start button
+    document.getElementById("welcomesubmit").addEventListener("click", startQuiz);
+
+    // submit an Answer         
+    document.getElementById("submit").addEventListener("click", submitAnswer);
+    // navigate to next question
+    document.getElementById("next").addEventListener("click", nextQuestion);
+}
+
+function initAnswerButtons() {
+    // answers            
+    for (i = 0; i < 4; i++) {
+        document.getElementById("answer" + i).style.backgroundColor = "#3498db";
+    }
+
+}
+
 
