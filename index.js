@@ -1,3 +1,4 @@
+// data for historic quiz
 const historicQuestions = [
     {
         question: "Which famous scientist developed the theory of general relativity?",
@@ -48,3 +49,22 @@ const historicQuestions = [
         options: ["1989", "1975", "1991", "1985"],
         correctAnswer: 0
     }];
+
+// question which is currently displayed
+let currentQuestion = 4;
+
+// display question 
+displayQuestion(historicQuestions, currentQuestion);
+
+// function to fill boxes for one question
+function displayQuestion(questions, index) {
+
+    document.getElementById("question").innerHTML = questions[index].question;
+    for (i = 0; i < 4; i++) {
+        document.getElementById("answer" + i).innerHTML = questions[index].options[i];
+    }
+}
+
+
+
+
