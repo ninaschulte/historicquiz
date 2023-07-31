@@ -93,6 +93,44 @@ function chooseAnswer(event) {
 
             }
 
+            // mark clicked answer
+            chosenAnswerButton.style.backgroundColor = "red";
+
+            // set "current answer" to clicked answer
+            currentAnswer = chosenAnswerButton.id.charAt(6);
+
+        }
+
+    }
+
+    // inform that answer was already submitted
+    else {
+
+        // simple alert            
+        alert("You already submitted your answer");
+
+    }
+
+
+}
+
+// was the answer submitted already?
+let submitted = false;
+
+// init Handlers
+initHandlers();        
+
+// handler for submit button       
+function submitAnswer(event) {
+
+    // submit is only possible if an answer was chosen
+    if (currentAnswer != 5) {
+
+        // note that answer was submitted so no further change is allowed
+        submitted = true;
+
+        let correctAnswer = historicQuestions[currentQuestion].correctAnswer;
+
 
 
 
