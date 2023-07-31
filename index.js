@@ -188,5 +188,17 @@ function submitAnswer(event) {
 }
 
 //        
+function showRandomQuestion() {
+
+
+
+    // determine random number    
+    let currentQuestion = nextRandomQuestionNumber(historicQuestions, usedNumbers);
+
+    // show question with random ID
+    displayQuestion(historicQuestions, currentQuestion);
+
+    // reset current answer
+    currentAnswer = 4;     
 
 
