@@ -1,4 +1,4 @@
-// data for historic quiz
+
 const historicQuestions = [
     {
         question: "Which famous scientist developed the theory of general relativity?",
@@ -50,15 +50,18 @@ const historicQuestions = [
         correctAnswer: 0
     }];
 
-// question
-document.getElementById("question").innerHTML = questions[index].question;
+// which random numers were already used before
+const usedNumbers = [];
 
-// answers            
-for (i = 0; i < 4; i++) {
-    document.getElementById("answer" + i).innerHTML = questions[index].options[i];
-}
+//number of correct and wrong answers
+let correctAnswers = 0;
+let wrongAnswers = 0;
 
-// question which is currently displayed
+// how many questions does the user have to answer and how many did he answer already
+let numberOfQuestions = 3;
+//let answeredQuestions = 0;
+
+// what question ("id") is currently being asked / shown
 let currentQuestion = 4;
 
 // how many questions were shown
@@ -70,28 +73,21 @@ let currentAnswer = 4;
 // was the answer submitted already?
 let submitted = false;
 
+// init Handlers
+initHandlers();
 
-// display question 
-displayQuestion(historicQuestions, currentQuestion);
-
-// function to fill boxes for one question
+// function to fill elements for one question
 function displayQuestion(questions, index) {
 
+    // question
     document.getElementById("question").innerHTML = questions[index].question;
+
+    // answers            
     for (i = 0; i < 4; i++) {
         document.getElementById("answer" + i).innerHTML = questions[index].options[i];
     }
-}
 
-// question
-document.getElementById("question").innerHTML = questions[index].question;
-
-// answers            
-for (i = 0; i < 4; i++) {
-    document.getElementById("answer" + i).innerHTML = questions[index].options[i];
 }
-        
-        }
 
 //		handler for choosing an answer
 function chooseAnswer(event) {
@@ -132,12 +128,6 @@ function chooseAnswer(event) {
 
 }
 
-// was the answer submitted already?
-let submitted = false;
-
-// init Handlers
-initHandlers();        
-
 // handler for submit button       
 function submitAnswer(event) {
 
@@ -149,37 +139,54 @@ function submitAnswer(event) {
 
         let correctAnswer = historicQuestions[currentQuestion].correctAnswer;
 
-        // handler for submit button       
-        function submitAnswer(event) {
+        // mark correct answer
+        document.getElementById("answer" + correctAnswer).style.backgroundColor = "green";
 
-            // submit is only possible if an answer was chosen
-            if (currentAnswer != 5) {
+        // count correct / wrong answers
+        if (currentAnswer == correctAnswer) {
 
-                // note that answer was submitted so no further change is allowed
-                submitted = true;
-
-                let correctAnswer = historicQuestions[currentQuestion].correctAnswer;
-
-                // mark correct answer
-                document.getElementById("answer" + correctAnswer).style.backgroundColor = "green";
-
-                // count correct / wrong answers
-                if (currentAnswer == correctAnswer) {
-
-                    correctAnswers++;
-                }
-                else {
-
-                    wrongAnswers++;
-
-                }
-            }
-            else {
-                // simple alert            
-                alert("Please choose an answer first");
-
-            }
+            correctAnswers++;
         }
+        else {
+
+            wrongAnswers++;
+
+        }
+    }
+    else {
+        // simple alert            
+        alert("Please choose an answer first");
+
+    }
+}
+
+// check user name and start quiz
+function startQuiz() {
+
+    // check that user name was supplied
+    if (document.getElementById("username").value == "") {
+        // simple alert            
+        alert("Please enter a name");
+    }
+    else {
+        document.getElementById("welcome").style.display = "none";
+        document.getElementById("play").style.display = "flex";
+        showRandomQuestion();
+
+    }
+
+}
+
+// handler for next button        
+function nextQuestion(event) {
+
+    // if the answer was not submitted, next is not possible
+    if (!submitted) {
+
+        // simple alert            
+        alert("No Answer submitted");
+    }
+    else {
 
         // show next question, if all are answered show result page                
         if (questionsShown < numberOfQuestions) {
@@ -207,16 +214,32 @@ function showRandomQuestion() {
     displayQuestion(historicQuestions, currentQuestion);
 
     // reset current answer
-    currentAnswer = 4;     
+    currentAnswer = 4;
 
     // turn buttons blue again            
     initAnswerButtons();
+
+    // set to not submitted
+    submitted = false;
+
+    // increase question counter
+    questionsShown++;
+}
+
+// add onclick event listeners
+function initHandlers() {
+
+    // answer buttons
+    for (i = 0; i < 4; i++) {
+        document.getElementById("answer" + i).addEventListener("click", chooseAnswer);
+    }
 
     // start button
     document.getElementById("welcomesubmit").addEventListener("click", startQuiz);
 
     // submit an Answer         
     document.getElementById("submit").addEventListener("click", submitAnswer);
+
     // navigate to next question
     document.getElementById("next").addEventListener("click", nextQuestion);
 }
@@ -252,6 +275,7 @@ function nextRandomQuestionNumber(questionArray, numbersArray) {
 
     numbersArray.push(randomNumber);
     return (randomNumber);
-}       
+}        
+
 
 
