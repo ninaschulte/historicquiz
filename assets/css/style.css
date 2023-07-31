@@ -24,6 +24,7 @@ main {
 /* welcome section style */
 #welcome {
     align-items: center;
+    display: none;
 
 }
 
