@@ -247,5 +247,32 @@ function nextRandomQuestionNumber(questionArray, numbersArray) {
     return (randomNumber);
 }
 
+/* Dialog for quiz rules */
+const dialog = document.querySelector("#myDialog");
+const openButton = document.querySelector("#openDialogButton");
+const closeButton = document.querySelector("#closeButton");
+
+// Function to open the dialog
+function openDialog() {
+  dialog.showModal();
+}
+// Function to close the dialog
+function closeDialog() {
+  dialog.close();
+}
+// Connect the open button to the openDialog function
+openButton.addEventListener("click", openDialog);
+// Connect the close button to the closeDialog function
+closeButton.addEventListener("click", closeDialog);
+
+
+
+
+
+
+
+
+
+
 
 

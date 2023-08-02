@@ -83,3 +83,22 @@ align-items: center;
     flex-direction: row;
     align-items: center;
 }
+
+/* style pop up message for rules */
+dialog {
+    z-index: 10;
+    margin-top: 10px;
+    background: grey;
+    border: none;
+    border-radius: 1rem;
+}
+
+#closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
