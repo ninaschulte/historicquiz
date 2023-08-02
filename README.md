@@ -36,9 +36,10 @@ Once user submit the answer, application will show to the user the correct answe
 ![Alt Text](Documentation/showwrong.png)
 ### Submit button and Next button
 Every question has a submit button and a next button. Once an answer is selected and the submit button is clicked, the submit button will disappear. Users will have to click on the next button to proceed to the next question.
-![Alt Text](Documentation/nosubmitedanswer.png)
+![Alt Text](Documentation/nosubmittedanswer.png)
 ## Result page
-
+The Result page is shown to the user after the user submits the 10th answer. The Result page will show the user the number of correct answers.
+![Alt Text](Documentation/resultpage.png)
 # Bugs
 | Bug | Visual of a bug | Fix | Comments |
 | ---------------- | ---------------- | ---------------- |  ---------------- |
