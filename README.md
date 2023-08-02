@@ -2,7 +2,7 @@
 Website consist of 10 historic questions.
 # User stories
 | ID | User story |
-| ---------------- | ---------------- | ---------------- |  ---------------- |
+| ---------------- | ---------------- | 
 | 1# | As a user I want to see the purpose of the website when I open it, so that I know about what it is. |
 | 2# | As a user I want to see the rules of the quiz, so that I know how to play it. |
 | 3# | As a user I want to type my name into input field, so that I get personalized results. | 
