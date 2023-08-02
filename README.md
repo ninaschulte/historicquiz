@@ -41,12 +41,19 @@ Every question has a submit button and a next button. Once an answer is selected
 The Result page is shown to the user after the user submits the 10th answer. The Result page will show the user the number of correct answers.
 ![Alt Text](Documentation/resultpage.png)
 # Testing
-JavaScript
-No errors were found when passing through the official Jshint validator
-There are 12 functions in this file.
-Function with the largest signature take 2 arguments, while the median is 0.
-Largest function has 13 statements in it, while the median is 5.5.
-The most complex function has a cyclomatic complexity value of 5 while the median is 2.
+- HTML
+  - No errors were found when passing through the official HTML validator.
+
+- CSS
+  - No errors were found when passing through the official CSS validator.
+
+- JavaScript
+  - No errors were found when passing through the official Jshint validator.
+  - There are 12 functions in this file.
+  - Function with the largest signature takes 2 arguments, while the median is 0.
+  - The largest function has 13 statements in it, while the median is 5.5.
+  - The most complex function has a cyclomatic complexity value of 5 while the median is 2.
+
 # Bugs
 | Bug | Visual of a bug | Fix | Comments |
 | ---------------- | ---------------- | ---------------- |  ---------------- |
