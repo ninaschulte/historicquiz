@@ -17,7 +17,11 @@ Website consist of 10 historic questions.
 # Diagram
 ![Alt Text](Documentation/diagram.png)
 # Features
-
+## Landing page
+![Alt Text](Documentation/typename.png)
+## Rules
+![Alt Text](Documentation/rules-button.png)
+![Alt Text](Documentation/rules.png)
 # Bugs
 | Bug | Visual of a bug | Fix | Comments |
 | ---------------- | ---------------- | ---------------- |  ---------------- |
