@@ -247,20 +247,21 @@ function nextRandomQuestionNumber(questionArray, numbersArray) {
     return (randomNumber);
 }
 
-/* Function to show results */
+/*
+/* Function to show results 
 function showResult() {
     document.getElementById("play").style.display = "none";
     document.getElementById("correctAnswers").innerText = `Correct Answers: ${correctAnswers}`;
 }
 
-/* Function to show result page after the last next question */
+/* Function to show result page after the last next question 
 function nextQuestion(event) {
     if (numberOfQuestion < 10) {
          showRandomQuestion();
     } else {
          showResult(); 
       }
-    }
+    } */
 
 /* Dialog for quiz rules */
 const dialog = document.querySelector("#myDialog");
