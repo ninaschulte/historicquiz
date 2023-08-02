@@ -1,5 +1,6 @@
 # Historic quiz
 Website consist of 10 historic questions.
+![Alt Text](Documentation/responsivelayout.png)
 # User stories
 | ID | User story |
 | ---------------- | ---------------- | 
