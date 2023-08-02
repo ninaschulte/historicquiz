@@ -32,6 +32,7 @@ Quiz consists of 10 questions and 4 options under each question. Only one answer
 Each question is also showing the progress of the user, so that the user knows how many more questions there are left to answer.
 ### Show correct answer
 Once user submit the answer, application will show to the user the correct answer.
+
 ![Alt Text](Documentation/showthecorrect.png)
 ![Alt Text](Documentation/showwrong.png)
 ### Submit button and Next button
