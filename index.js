@@ -87,6 +87,8 @@ function displayQuestion(questions, index) {
         document.getElementById("answer" + i).innerHTML = questions[index].options[i];
     }
 
+    // show submit button
+    document.getElementById("submit").style.display = "flex";
 }
 
 //		handler for choosing an answer
@@ -131,34 +133,42 @@ function chooseAnswer(event) {
 // handler for submit button       
 function submitAnswer(event) {
 
-    // submit is only possible if an answer was chosen
-    if (currentAnswer != 5) {
+    if (!submitted) {
+        // submit is only possible if an answer was chosen
+        if (currentAnswer != 5) {
 
-        // note that answer was submitted so no further change is allowed
-        submitted = true;
+            // note that answer was submitted so no further change is allowed
+            submitted = true;
 
-        let correctAnswer = historicQuestions[currentQuestion].correctAnswer;
+            let correctAnswer = historicQuestions[currentQuestion].correctAnswer;
 
-        // mark correct answer
-        document.getElementById("answer" + correctAnswer).style.backgroundColor = "green";
+            // mark correct answer
+            document.getElementById("answer" + correctAnswer).style.backgroundColor = "green";
 
-        // count correct / wrong answers
-        if (currentAnswer == correctAnswer) {
+            // count correct / wrong answers
+            if (currentAnswer == correctAnswer) {
 
-            correctAnswers++;
+                correctAnswers++;
+            }
+            else {
+
+                wrongAnswers++;
+
+            }
+            // show progress
+            document.getElementById("numberanswered").innerHTML = correctAnswers + wrongAnswers;
+            document.getElementById("numberofquestions").innerHTML = numberOfQuestions;
+            document.getElementById("submit").style.display = "none";
         }
         else {
-
-            wrongAnswers++;
+            // simple alert            
+            alert("Please choose an answer first");
 
         }
-        // show progress
-        document.getElementById("numberanswered").innerHTML = correctAnswers + wrongAnswers;
-        document.getElementById("numberofquestions").innerHTML = numberOfQuestions;
     }
     else {
         // simple alert            
-        alert("Please choose an answer first");
+        alert("You already submitted an answer");
 
     }
 }
@@ -283,7 +293,7 @@ function nextRandomQuestionNumber(questionArray, numbersArray) {
 
     numbersArray.push(randomNumber);
     return (randomNumber);
-}        
+}
 
 
 
