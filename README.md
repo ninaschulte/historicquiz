@@ -19,9 +19,18 @@ Website consist of 10 historic questions.
 # Features
 ## Landing page
 ![Alt Text](Documentation/typename.png)
+![Alt Text](Documentation/requiredname.png)
 ## Rules
 ![Alt Text](Documentation/rules-button.png)
 ![Alt Text](Documentation/rules.png)
+## Display Question
+
+### Show correct answer
+![Alt Text](Documentation/showthecorrect.png)
+![Alt Text](Documentation/showwrong.png)
+## Alert messages
+![Alt Text](Documentation/nosubmitedanswer.png)
+
 # Bugs
 | Bug | Visual of a bug | Fix | Comments |
 | ---------------- | ---------------- | ---------------- |  ---------------- |
