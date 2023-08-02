@@ -76,7 +76,8 @@ let submitted = false;
 // init Handlers
 initHandlers();
 
-// function to fill elements for one question
+/* Function that fill up all html elements with text. 
+Function is called called for each question. */
 function displayQuestion(questions, index) {
 
     // question
@@ -130,7 +131,8 @@ function chooseAnswer(event) {
 
 }
 
-// handler for submit button       
+/* Function for submit button. 
+It is called everytime submit button tapped. */       
 function submitAnswer(event) {
 
     if (!submitted) {
@@ -173,11 +175,9 @@ function submitAnswer(event) {
     }
 }
 
-
-
-// check user name and start quiz
+/* FUnction for start quiz. 
+It is called when user tap on "Start quiz button" */
 function startQuiz() {
-
     // check that user name was supplied
     if (document.getElementById("username").value == "") {
         // simple alert            
@@ -193,9 +193,9 @@ function startQuiz() {
     }
 }
 
-// handler for next button        
+/* Function for next question.
+It is called everytime user tap on "Next question" button */        
 function nextQuestion(event) {
-
     // if the answer was not submitted, next is not possible
     if (!submitted) {
 
@@ -203,94 +203,76 @@ function nextQuestion(event) {
         alert("No Answer submitted");
     }
     else {
-
         // show next question, if all are answered show result page                
         if (questionsShown < numberOfQuestions) {
-
             showRandomQuestion();
-
         }
         else {
-
             document.getElementById("play").style.display = "none";
             document.getElementById("result").style.display = "flex";
         }
     }
 }
 
-//        
+/* Function to show random question. 
+It is called when user tap on "Start quiz" button and "Next question" button. */      
 function showRandomQuestion() {
-
-
-
     // determine random number    
     let currentQuestion = nextRandomQuestionNumber(historicQuestions, usedNumbers);
-
     // show question with random ID
     displayQuestion(historicQuestions, currentQuestion);
-
     // reset current answer
     currentAnswer = 4;
-
     // turn buttons blue again            
     initAnswerButtons();
-
     // set to not submitted
     submitted = false;
-
     // increase question counter
     questionsShown++;
 }
 
-// add onclick event listeners
-function initHandlers() {
 
+/* Function for all event listeners - 
+add onclick event listeners. */
+function initHandlers() {
     // answer buttons
     for (i = 0; i < 4; i++) {
         document.getElementById("answer" + i).addEventListener("click", chooseAnswer);
     }
-
     // start button
     document.getElementById("welcomesubmit").addEventListener("click", startQuiz);
-
     // submit an Answer         
     document.getElementById("submit").addEventListener("click", submitAnswer);
-
     // navigate to next question
     document.getElementById("next").addEventListener("click", nextQuestion);
 }
 
-
-
+/* Function to turn button blue again after next question button is clicked. */
 function initAnswerButtons() {
     // answers            
     for (i = 0; i < 4; i++) {
         document.getElementById("answer" + i).style.backgroundColor = "#3498db";
     }
-
 }
 
+/* Function for next random question number. 
+The purpose of this function is to not show the same question twice. */
 function nextRandomQuestionNumber(questionArray, numbersArray) {
     let randomNumber;
     // Check if we can do anything at all
     if (numbersArray.length == questionArray.length) {
         console.log('All numbers gone');
     }
-
     let i = 0;
     // check if number is new
     do {
         // use math random and math floor to return integer
         randomNumber = Math.floor(Math.random() * questionArray.length);
-
         i++;
-
         if (i == 10) {
             break;
         }
-
     } while (numbersArray.includes(randomNumber));
-
     numbersArray.push(randomNumber);
     return (randomNumber);
 }
