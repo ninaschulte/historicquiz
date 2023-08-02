@@ -1,4 +1,5 @@
 
+// data for historic quiz
 const historicQuestions = [
     {
         question: "Which famous scientist developed the theory of general relativity?",
@@ -50,26 +51,21 @@ const historicQuestions = [
         correctAnswer: 0
     }];
 
+/* All variables */
 // which random numers were already used before
 const usedNumbers = [];
-
 //number of correct and wrong answers
 let correctAnswers = 0;
 let wrongAnswers = 0;
-
 // how many questions does the user have to answer and how many did he answer already
 let numberOfQuestions = 10;
 //let answeredQuestions = 0;
-
 // what question ("id") is currently being asked / shown
 let currentQuestion = 4;
-
 // how many questions were shown
 let questionsShown = 0;
-
 // what answer was clicked last?
 let currentAnswer = 4;
-
 // was the answer submitted already?
 let submitted = false;
 
