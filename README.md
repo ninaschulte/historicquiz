@@ -29,11 +29,13 @@ The Button for rules in the header is accessible throughout the entire quiz. Whe
 Quiz consists of 10 questions and 4 options under each question. Only one answer is correct, and once the user submits the question, the user can't change the response anymore.
 ![Alt Text](Documentation/displayquestion.png)
 ### Progress
-
+Each question is also showing the progress of the user, so that the user knows how many more questions there are left to answer.
 ### Show correct answer
+Once user submit the answer, application will show to the user the correct answer.
 ![Alt Text](Documentation/showthecorrect.png)
 ![Alt Text](Documentation/showwrong.png)
 ### Submit button and Next button
+Every question has a submit button and a next button. Once an answer is selected and the submit button is clicked, the submit button will disappear. Users will have to click on the next button to proceed to the next question.
 ![Alt Text](Documentation/nosubmitedanswer.png)
 ## Result page
 
