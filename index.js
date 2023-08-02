@@ -247,11 +247,25 @@ function nextRandomQuestionNumber(questionArray, numbersArray) {
     return (randomNumber);
 }
 
+/* Function to show results */
+function showResult() {
+    document.getElementById("play").style.display = "none";
+    document.getElementById("correctAnswers").innerText = `Correct Answers: ${correctAnswers}`;
+}
+
+/* Function to show result page after the last next question */
+function nextQuestion(event) {
+    if (numberOfQuestion < 10) {
+         showRandomQuestion();
+    } else {
+         showResult(); 
+      }
+    }
+
 /* Dialog for quiz rules */
 const dialog = document.querySelector("#myDialog");
 const openButton = document.querySelector("#openDialogButton");
 const closeButton = document.querySelector("#closeButton");
-
 // Function to open the dialog
 function openDialog() {
   dialog.showModal();
@@ -260,10 +274,10 @@ function openDialog() {
 function closeDialog() {
   dialog.close();
 }
-// Connect the open button to the openDialog function
 openButton.addEventListener("click", openDialog);
-// Connect the close button to the closeDialog function
 closeButton.addEventListener("click", closeDialog);
+
+
 
 
 
