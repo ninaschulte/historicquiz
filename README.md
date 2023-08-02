@@ -1,7 +1,18 @@
 # Historic quiz
 Website consist of 10 historic questions.
 # User stories
-
+| ID | User story |
+| ---------------- | ---------------- | ---------------- |  ---------------- |
+| 1# | As a user I want to see the purpose of the website when I open it, so that I know about what it is. |
+| 2# | As a user I want to see the rules of the quiz, so that I know how to play it. |
+| 3# | As a user I want to type my name into input field, so that I get personalized results. | 
+| 4# | As a user, I want to have a clear direction, how to start the quiz. |
+| 5# | As a user I want to be able to submit the correct answer, so that I can move to the next question. |
+| 6# | As a user I want to be able to move to the next question. |
+| 7# | As a user I want to have direct feedback on my submitted answer, so that I know which answer was a correct one. |
+| 2# | As a user I want see progress, so that I know how many questions are left. |
+| 3# | As a user I want to see the result page after I submitted the last question, so that I know how many I answered correctly.| 
+| 4# | As a user, I want to see who is the author of the website |
 # Diagram
 ![Alt Text](Documentation/diagram.png)
 # Features
