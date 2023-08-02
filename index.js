@@ -58,7 +58,7 @@ let correctAnswers = 0;
 let wrongAnswers = 0;
 
 // how many questions does the user have to answer and how many did he answer already
-let numberOfQuestions = 3;
+let numberOfQuestions = 10;
 //let answeredQuestions = 0;
 
 // what question ("id") is currently being asked / shown
@@ -152,6 +152,9 @@ function submitAnswer(event) {
             wrongAnswers++;
 
         }
+        // show progress
+        document.getElementById("numberanswered").innerHTML = correctAnswers + wrongAnswers;
+        document.getElementById("numberofquestions").innerHTML = numberOfQuestions;
     }
     else {
         // simple alert            
@@ -159,6 +162,8 @@ function submitAnswer(event) {
 
     }
 }
+
+
 
 // check user name and start quiz
 function startQuiz() {
@@ -172,9 +177,10 @@ function startQuiz() {
         document.getElementById("welcome").style.display = "none";
         document.getElementById("play").style.display = "flex";
         showRandomQuestion();
-
+        // show progress
+        document.getElementById("numberanswered").innerHTML = correctAnswers + wrongAnswers;
+        document.getElementById("numberofquestions").innerHTML = numberOfQuestions;
     }
-
 }
 
 // handler for next button        
@@ -243,6 +249,8 @@ function initHandlers() {
     // navigate to next question
     document.getElementById("next").addEventListener("click", nextQuestion);
 }
+
+
 
 function initAnswerButtons() {
     // answers            

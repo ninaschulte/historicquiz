@@ -17,7 +17,7 @@
         <form>
             <label for="username">Type your name</label><br>
             <input type="text" id="username" required></input>
-            <input type="submit" id="welcomesubmit" value="Start Quiz"></input>
+            <input type="button" id="welcomesubmit" value="Start Quiz"></input>
         </form>
     </section>
     <section id="play">
@@ -34,11 +34,15 @@
             <input type="submit" id="next" value="Go to the next question"></input>
           </div>
         </div>
-        <p id="progress"></p>
+        <div id="progress">
+            <p id="numberanswered"></p>
+            <p>/</p>
+            <p id="numberofquestions"></p>
+        </div>
     </section>
     <section id="result">
         <h1 id="congratulation"></h1>
-        <p></p>
+        <p id="score"></p>
     </section>
 </main>
 <footer>
