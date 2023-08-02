@@ -14,12 +14,12 @@
         <li>Single Submission: Each question can be submitted only once.</li>
         <li>Next Question: To move to the next question, press the "Next" button.</li>
         <li>Quiz Progress: During the quiz, you will see the number of questions left to answer.</li>
-        <li>Quiz Completion: After answering all 10 questions, the quiz will end.</li> <!-- Missing closing tag here -->
+        <li>Quiz Completion: After answering all 10 questions, the quiz will end.</li> 
     </ol>
     <button id="closeButton">X</button>
 </dialog>
 <header>
-     <button id="openDialogButton">Open Dialog</button>
+     <button id="openDialogButton">Rules</button>
 </header>
 <main>
     <section id="welcome">
@@ -51,10 +51,12 @@
         </div>
     </section>
     <section id="result">
-        <h1 id="congratulation">You finish the quiz!</h1>
-        <p id="score">Your score:</p>
-        <p id="correctAnswers"></p>
-        <p>out of 10 answers</p>
+            <h1 id="congratulation">You finished the quiz!</h1>
+            <div id="scoreresult">
+                <p id="score">Your score:</p>
+                <p id="correctAnswers"></p>
+                <p>out of 10 answers</p>
+            </div>
     </section>
 </main>
 <footer>

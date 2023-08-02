@@ -112,7 +112,7 @@ function chooseAnswer(event) {
 }
 
 /* Function for submit button. 
-It is called everytime submit button tapped. */       
+It is called everytime submit button tapped. */
 function submitAnswer(event) {
     if (!submitted) {
         // submit is only possible if an answer was chosen
@@ -164,7 +164,7 @@ function startQuiz() {
 }
 
 /* Function for next question.
-It is called everytime user tap on "Next question" button */        
+It is called everytime user tap on "Next question" button */
 function nextQuestion(event) {
     // if the answer was not submitted, next is not possible
     if (!submitted) {
@@ -180,15 +180,16 @@ function nextQuestion(event) {
         else {
             document.getElementById("play").style.display = "none";
             document.getElementById("result").style.display = "flex";
+            showResult();
         }
     }
 }
 
 /* Function to show random question. 
-It is called when user tap on "Start quiz" button and "Next question" button. */      
+It is called when user tap on "Start quiz" button and "Next question" button. */
 function showRandomQuestion() {
     // determine random number    
-    let currentQuestion = nextRandomQuestionNumber(historicQuestions, usedNumbers);
+    currentQuestion = nextRandomQuestionNumber(historicQuestions, usedNumbers);
     // show question with random ID
     displayQuestion(historicQuestions, currentQuestion);
     // reset current answer
@@ -200,7 +201,6 @@ function showRandomQuestion() {
     // increase question counter
     questionsShown++;
 }
-
 
 /* Function for all event listeners - 
 add onclick event listeners. */
@@ -238,30 +238,15 @@ function nextRandomQuestionNumber(questionArray, numbersArray) {
     do {
         // use math random and math floor to return integer
         randomNumber = Math.floor(Math.random() * questionArray.length);
-        i++;
-        if (i == 10) {
-            break;
-        }
     } while (numbersArray.includes(randomNumber));
     numbersArray.push(randomNumber);
     return (randomNumber);
 }
 
-/*
-/* Function to show results 
+/* Function showresult */
 function showResult() {
-    document.getElementById("play").style.display = "none";
-    document.getElementById("correctAnswers").innerText = `Correct Answers: ${correctAnswers}`;
+    document.getElementById("correctAnswers").innerHTML = correctAnswers;
 }
-
-/* Function to show result page after the last next question 
-function nextQuestion(event) {
-    if (numberOfQuestion < 10) {
-         showRandomQuestion();
-    } else {
-         showResult(); 
-      }
-    } */
 
 /* Dialog for quiz rules */
 const dialog = document.querySelector("#myDialog");
@@ -269,11 +254,11 @@ const openButton = document.querySelector("#openDialogButton");
 const closeButton = document.querySelector("#closeButton");
 // Function to open the dialog
 function openDialog() {
-  dialog.showModal();
+    dialog.showModal();
 }
 // Function to close the dialog
 function closeDialog() {
-  dialog.close();
+    dialog.close();
 }
 openButton.addEventListener("click", openDialog);
 closeButton.addEventListener("click", closeDialog);
