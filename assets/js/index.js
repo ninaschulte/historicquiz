@@ -83,6 +83,7 @@ function displayQuestion(questions, index) {
     }
     // show submit button
     document.getElementById("submit").style.display = "flex";
+    document.getElementById("next").style.display = "none";
 }
 
 /* Function to choose answer. 
@@ -116,7 +117,7 @@ It is called everytime submit button tapped. */
 function submitAnswer(event) {
     if (!submitted) {
         // submit is only possible if an answer was chosen
-        if (currentAnswer != 5) {
+        if (currentAnswer != 4) {
             // note that answer was submitted so no further change is allowed
             submitted = true;
             let correctAnswer = historicQuestions[currentQuestion].correctAnswer;
@@ -133,6 +134,7 @@ function submitAnswer(event) {
             document.getElementById("numberanswered").innerHTML = correctAnswers + wrongAnswers;
             document.getElementById("numberofquestions").innerHTML = numberOfQuestions;
             document.getElementById("submit").style.display = "none";
+            document.getElementById("next").style.display = "flex";
         }
         else {
             // simple alert            
@@ -263,7 +265,7 @@ function closeDialog() {
 openButton.addEventListener("click", openDialog);
 closeButton.addEventListener("click", closeDialog);
 
-//Reload page
+//Reload page button to the result page
 const reloadButton = document.getElementById('reloadButton');
 reloadButton.addEventListener('click', function () {
     location.reload();
