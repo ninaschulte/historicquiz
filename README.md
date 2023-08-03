@@ -1,6 +1,6 @@
 # Historic quiz
 Historic Quiz is an engaging and educational quiz application that takes you on a journey through time. Test your knowledge of history with 10 randomly selected questions covering various eras, events, and personalities. From ancient civilizations to modern revolutions, this quiz will challenge and entertain history enthusiasts of all levels.
-*Note - screenshots were done before the final styling
+*Note - screenshots were done before the final styling. Next button is hidden when user did not submit the answer yet.
 ![Alt Text](Documentation/responsivelayout.png)
 # User stories
 | ID | User story |
@@ -18,7 +18,7 @@ Historic Quiz is an engaging and educational quiz application that takes you on 
 # Diagram
 ![Alt Text](documentation/diagram.png)
 # Features
-*Note - all screenshots were done before the final styling
+*Note - screenshots were done before the final styling. Next button is hidden when user did not submit the answer yet.
 ## Landing page
 On the landing page, you are presented with an input field where users need to type their names. In the header, there are rules, and in the footer, you can find the name of the author. Users must type their names to start the quiz. Users can initiate the quiz by submitting the 'Start the quiz' button.
 ![Alt Text](documentation/typename.png)
