@@ -1,6 +1,6 @@
 # Historic quiz
 Historic Quiz is an engaging and educational quiz application that takes you on a journey through time. Test your knowledge of history with 10 randomly selected questions covering various eras, events, and personalities. From ancient civilizations to modern revolutions, this quiz will challenge and entertain history enthusiasts of all levels.
-*Note - screenshots were done before the final styling
+*Note - screenshots were done before the final styling. Next button is hidden when user did not submit the answer yet.
 ![Alt Text](Documentation/responsivelayout.png)
 # User stories
 | ID | User story |
@@ -18,7 +18,7 @@ Historic Quiz is an engaging and educational quiz application that takes you on 
 # Diagram
 ![Alt Text](documentation/diagram.png)
 # Features
-*Note - all screenshots were done before the final styling
+*Note - screenshots were done before the final styling. Next button is hidden when user did not submit the answer yet.
 ## Landing page
 On the landing page, you are presented with an input field where users need to type their names. In the header, there are rules, and in the footer, you can find the name of the author. Users must type their names to start the quiz. Users can initiate the quiz by submitting the 'Start the quiz' button.
 ![Alt Text](documentation/typename.png)
@@ -46,16 +46,17 @@ The Result page is shown to the user after the user submits the 10th answer. The
 # Testing
 - HTML
   - No errors were found when passing through the official HTML validator.
-
+![Alt Text](documentation/html.png)
 - CSS
   - No errors were found when passing through the official CSS validator.
-
+![Alt Text](documentation/css.png)
 - JavaScript
   - No errors were found when passing through the official Jshint validator.
   - There are 12 functions in this file.
   - Function with the largest signature takes 2 arguments, while the median is 0.
   - The largest function has 13 statements in it, while the median is 5.5.
   - The most complex function has a cyclomatic complexity value of 5 while the median is 2.
+  ![Alt Text](documentation/javascript.png)
 # Deployment 
 This site was deployed to Github pages. Steps to deploy are as follows:
 
@@ -68,12 +69,9 @@ Once the master branch has been selected, the page provided the link to the comp
 | ![Image 1](documentation/bug1a.png)  |   | ![Image 1](documentation/fix1a.png)  | Quiz didn´t start because I used for start quiz input submit. The bug was fixed once I change it to button. |
 | ![Image 1](documentation/bug1b.png)  | ![Image 1](documentation/screen1b.png)  | ![Image 1](documentation/fix1b.png)   | Submit button was not showing alert message when clicking on it and instead the number on progress section was increasing. Bug solved with if !submitted. |
 | ![Image 1](documentation/bug1c.png)  |   |   | The same option was always the correct one. Accidental local declaration removed. |
-# Unresolved bugs
-- Cosmetic bugs:
-  - space between Submit answer and Next question button,
-  - Nicer style of rules button,
-  - Footer fix on the bottom.
-  - Result page - better style for score.
+# Unresolved things
+- Cosmetic topics:
+  - style for all the buttons
 # Credits
 - https://www.w3schools.com/js/default.asp - for writing many functions and also for trying it out before I added it to the CodeAnyWhere. 
 - Dialog for rules was created using instructions on the following page: https://blog.webdevsimplified.com/2023-04/html-dialog/
