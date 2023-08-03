@@ -263,6 +263,12 @@ function closeDialog() {
 openButton.addEventListener("click", openDialog);
 closeButton.addEventListener("click", closeDialog);
 
+//Reload page
+const reloadButton = document.getElementById('reloadButton');
+reloadButton.addEventListener('click', function () {
+    location.reload();
+});
+
 
 
 
