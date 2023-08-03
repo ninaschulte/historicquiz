@@ -72,6 +72,7 @@ Once the master branch has been selected, the page provided the link to the comp
 # Unresolved things
 - Cosmetic topics:
   - style for all the buttons
+  - space between the question titels and answers.
 # Credits
 - https://www.w3schools.com/js/default.asp - for writing many functions and also for trying it out before I added it to the CodeAnyWhere. 
 - Dialog for rules was created using instructions on the following page: https://blog.webdevsimplified.com/2023-04/html-dialog/
