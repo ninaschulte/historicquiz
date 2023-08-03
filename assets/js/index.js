@@ -58,7 +58,7 @@ const usedNumbers = [];
 let correctAnswers = 0;
 let wrongAnswers = 0;
 // how many questions does the user have to answer and how many did he answer already
-let numberOfQuestions = 3;
+let numberOfQuestions = 10;
 //let answeredQuestions = 0;
 // what question ("id") is currently being asked / shown
 let currentQuestion = 4;
