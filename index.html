@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<dialog id="myDialog">
-    <h1>Historic Online Quiz Rules</h1>
-    <ol>
-        <li>Quiz Overview: The historic online quiz consists of 10 multiple-choice questions.</li>
-        <li>Single Submission: Each question can be submitted only once.</li>
-        <li>Next Question: To move to the next question, press the "Next" button.</li>
-        <li>Quiz Progress: During the quiz, you will see the number of questions left to answer.</li>
-        <li>Quiz Completion: After answering all 10 questions, the quiz will end.</li> 
-    </ol>
-    <button id="closeButton">X</button>
-</dialog>
 <header>
-     <button id="openDialogButton">Rules</button>
+    <h1>Historic quiz</h1>
+    <button id="openDialogButton">Rules</button>
 </header>
 <main>
     <section id="welcome">
-        <h1 id="welcomeheader">Welcome to the historic quiz</h1>
+        <h2 id="welcomeheader">Welcome to the historic quiz</h2>
         <form>
             <label for="username">Type your name</label><br>
             <input type="text" id="username" required></input>
@@ -31,7 +22,7 @@
         </form>
     </section>
     <section id="play">
-        <h1 id="question"></h1>
+        <h2 id="question"></h2>
         <div class="optionsinput">
             <div id="options">
                 <p id="answer0" class="box"></p>
@@ -51,16 +42,30 @@
         </div>
     </section>
     <section id="result">
-            <h1 id="congratulation">You finished the quiz!</h1>
-            <div id="scoreresult">
-                <p id="score">Your score:</p>
+        <h2 id="congratulation">You finished the quiz!</h2>
+        <div id="scoreresult">
+            <p id="score">Your score:</p>
+            <div>
                 <p id="correctAnswers"></p>
                 <p>out of 10 answers</p>
             </div>
+        </div>
     </section>
 </main>
+<dialog id="myDialog">
+    <h2>Historic Online Quiz Rules</h2>
+    <ol>
+        <li>Quiz Overview: The historic online quiz consists of 10 multiple-choice questions.</li>
+        <li>Single Submission: Each question can be submitted only once.</li>
+        <li>Next Question: To move to the next question, press the "Next" button.</li>
+        <li>Quiz Progress: During the quiz, you will see the number of questions left to answer.</li>
+        <li>Quiz Completion: After answering all 10 questions, the quiz will end.</li>
+    </ol>
+    <button id="closeButton">X</button>
+</dialog>
 <footer>
     <p>Copy Right Reserved by Nina Schulte.</p>
 </footer>
 <script src="index.js"></script>
+
 </html>
