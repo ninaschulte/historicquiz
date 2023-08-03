@@ -61,5 +61,12 @@ The Result page is shown to the user after the user submits the 10th answer. The
 | ![Image 1](Documentation/bug1a.png)  |   | ![Image 1](Documentation/fix1a.png)  | Quiz didn´t start because I used for start quiz input submit. The bug was fixed once I change it to button. |
 | ![Image 1](Documentation/bug1b.png)  | ![Image 1](Documentation/screen1b.png)  | ![Image 1](Documentation/fix1b.png)   | Submit button was not showing alert message when clicking on it and instead the number on progress section was increasing. Bug solved with if !submitted. |
 | ![Image 1](Documentation/bug1c.png)  |   |   | The same option was always the correct one. Accidental local declaration removed. |
+# Unresolved bugs
+- Cosmetic bugs:
+  - space between Submit answer and Next question button,
+  - Nicer style of rules button,
+  - Footer fix on the bottom.
+  - Result page - better style for score.
 # Credits
-https://www.w3schools.com/js/default.asp - for writing many functions and also for trying it out before I added it to the CodeAnyWhere. 
+- https://www.w3schools.com/js/default.asp - for writing many functions and also for trying it out before I added it to the CodeAnyWhere. 
+- Dialog for rules was created using instructions on the following page: https://blog.webdevsimplified.com/2023-04/html-dialog/
